@@ -4,7 +4,7 @@
 
 void setup(int s) {
     max_size = s;
-    stack = calloc(s, sizeof(stack));
+    stack = calloc(max_size, sizeof(stack));
     size = 0;
 }
 int getSize() {return size;}
