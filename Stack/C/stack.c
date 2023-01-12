@@ -3,7 +3,9 @@
 #include <stdlib.h>
 
 void setup(int s) {
+    max_size = s;
     stack = calloc(s, sizeof(stack));
+    size = 0;
 }
 int getSize() {return size;}
 void incSize() {size++;}
