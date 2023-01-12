@@ -6,9 +6,10 @@ int * stack;
 int size;
 int max_size;
 
+void setup(int s);
 int getSize();
-int incSize();
-int decSize();
+void incSize();
+void decSize();
 bool isEmpty();
 int top();
 void push(int data);
