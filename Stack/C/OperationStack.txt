@@ -1,0 +1,1 @@
+10 5.push 3.push pop pop pop 13.push 9.push 4.push pop 6.push 8.push pop

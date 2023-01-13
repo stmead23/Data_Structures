@@ -3,8 +3,7 @@
 #include <stdlib.h> //Adds support for calloc
 #include <stdbool.h> //Includes the bool values
 
-void setup(int s) { //Initializes the stack, and sets max_value and current size to 0
-    max_size = s;
+void setup() { //Initializes the stack, and sets current size to 0
     stack = calloc(max_size, sizeof(stack)); //Allocates memory for the stack
     size = 0;
 }
@@ -43,4 +42,15 @@ int pop() { //If the stack is empty, nothing is done. Otherwise, it removes the 
     stack[getSize()-1] = 0; //Eleminates the most recent element
     decSize(); //Updates the current size
     return data; //Returns the element
+}
+
+void printStack() { //Prints the entire stack
+    if (isEmpty()) { //Nothing to print if empty
+        printf("Empty.\n");
+        return;
+    }
+    for (int i = 0; i < size; i++) { //Iterates and prints list
+        printf("%d ", stack[i]);
+    }
+    putchar('\n');
 }
